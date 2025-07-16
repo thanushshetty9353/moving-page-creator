@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home" className="text-2xl font-bold text-rainbow-gradient hover-scale">
-            JD
+            TS
           </a>
 
           {/* Desktop Navigation */}

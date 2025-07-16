@@ -33,8 +33,11 @@ const About = () => {
             About <span className="text-gradient">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate developer with 5+ years of experience creating digital solutions that make a difference. 
-            I love turning complex problems into simple, beautiful, and intuitive designs.
+           An ambitious AI/ML engineering student passionate about designing intelligent, data-driven
+                        solutions to real-world challenges. Skilled in programming, web development, and AI-driven
+                        applications, I love blending creativity with technology. Beyond coding, I'm an active event
+                        organizer, problem solver, and team player who thrives in dynamic environments. Whether it's
+                        hackathons, innovative projects, or leadership roles.
           </p>
         </div>
 
@@ -42,14 +45,10 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Started as a curious student who fell in love with code, I've grown into a full-stack developer 
-              who thrives on building innovative solutions. My experience spans from startups to enterprise 
-              applications, always focusing on clean architecture and exceptional user experiences.
+              My journey into tech began in early 2022, even before I started engineering. I was naturally drawn to coding, design, and solving real-world problems. Since then, I've explored full-stack development and AI/ML, working on projects like a ship detection system using AI, my personal portfolio, and a feature-rich college fest website that reflects both creativity and functionality.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open source, 
-              or sharing knowledge with the developer community. I believe in continuous learning and 
-              staying ahead of the curve in this ever-evolving field.
+              I also took on the role of event coordinator for one of the most successful events in our college fest, which helped me grow as a leader and team player. I'm now focused on becoming proficient across various tech roles—from backend development to machine learning—while continuously building and learning to grow in this ever-evolving field.
             </p>
           </div>
           
@@ -58,19 +57,15 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Experience</span>
-                  <span className="text-primary font-semibold">5+ Years</span>
+                  <span className="text-primary font-semibold">Fresher</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Projects Completed</span>
-                  <span className="text-primary font-semibold">50+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Happy Clients</span>
-                  <span className="text-primary font-semibold">30+</span>
+                  <span className="text-primary font-semibold">7+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Technologies</span>
-                  <span className="text-primary font-semibold">20+</span>
+                  <span className="text-primary font-semibold">10+</span>
                 </div>
               </div>
             </div>

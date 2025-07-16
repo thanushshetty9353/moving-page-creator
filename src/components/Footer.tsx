@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gradient">John Doe</h3>
+            <h3 className="text-2xl font-bold text-gradient">Thanush Shetty</h3>
             <p className="text-muted-foreground max-w-sm">
-              Full Stack Developer passionate about creating innovative digital solutions and beautiful user experiences.
+             AIML Aspirant | Web Developer | Tech Explorer
             </p>
             <div className="flex space-x-2">
               {socialLinks.map((social) => (

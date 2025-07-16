@@ -9,9 +9,9 @@ const Hero = () => {
       
       {/* Neon Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-neon-gradient-1 rounded-full animate-float opacity-30 blur-sm" />
-      <div className="absolute top-40 right-20 w-16 h-16 bg-neon-gradient-2 rounded-full animate-float opacity-40 blur-sm" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-neon-gradient-2 rounded-full animate-float opacity-40 blur-sm" style={{ animationDelay: '3s' }} />
       <div className="absolute bottom-32 left-20 w-12 h-12 bg-neon-gradient-3 rounded-full animate-float opacity-30 blur-sm" style={{ animationDelay: '4s' }} />
-      <div className="absolute top-1/2 right-10 w-8 h-8 bg-neon-gradient-4 rounded-full animate-float opacity-50 blur-sm" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 right-10 w-8 h-8 bg-neon-gradient-4 rounded-full animate-float opacity-50 blur-sm" style={{ animationDelay: '2s' }} />
       <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-neon-gradient-1 rounded-full animate-float opacity-30 blur-sm" style={{ animationDelay: '3s' }} />
       
       {/* Content */}
@@ -45,16 +45,20 @@ const Hero = () => {
         </div>
         
         <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          <span className="text-rainbow-gradient">John Doe</span>
+          <span className="text-rainbow-gradient">Thanush Shetty</span>
         </h1>
         
-        <h2 className="text-3xl md:text-5xl font-light mb-8 text-transparent bg-neon-gradient-2 bg-clip-text animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          Full Stack Developer & Designer
-        </h2>
+        <h3 className="text-3xl md:text-5xl font-light mb-8 text-transparent bg-neon-gradient-2 bg-clip-text animate-slide-up" style={{ animationDelay: '0.4s' }}>
+           AIML Aspirant | Web Developer | Tech Explorer
+        </h3>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.6s' }}>
-          Crafting beautiful, functional, and user-centered digital experiences with modern technologies and creative solutions. 
-          <span className="text-neon-gradient-1"> Turning ideas into reality with code!</span>
+           An ambitious AI/ML engineering student passionate about designing intelligent, data-driven
+                        solutions to real-world challenges. Skilled in programming, web development, and AI-driven
+                        applications, I love blending creativity with technology. Beyond coding, I'm an active event
+                        organizer, problem solver, and team player who thrives in dynamic environments. Whether it's
+                        hackathons, innovative projects, or leadership roles.
+          <span className="text-neon-gradient-1"><br></br> I'm always up for a challenge and eager to make an impact!</span>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 animate-slide-up" style={{ animationDelay: '0.8s' }}>
