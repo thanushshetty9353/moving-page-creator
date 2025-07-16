@@ -1,7 +1,7 @@
 title,description,technologies,live_url,github_url,image,featured
-E-Commerce Platform,"A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard","React,Node.js,PostgreSQL,Stripe,AWS",https://ecommerce-demo.com,https://github.com/username/ecommerce,project1.jpg,true
-Social Media Dashboard,"Analytics dashboard for social media management with real-time data visualization and automated reporting","Vue.js,Python,MongoDB,Chart.js,Docker",https://social-dashboard.com,https://github.com/username/social-dashboard,project2.jpg,true
-Task Management App,"Collaborative project management tool with real-time updates, file sharing, and team communication features","Next.js,TypeScript,Firebase,Tailwind",https://taskmanager.com,https://github.com/username/taskmanager,project3.jpg,false
-Weather Forecast App,"Beautiful weather application with location-based forecasts, interactive maps, and weather alerts","React,OpenWeather API,Mapbox,PWA",https://weather-app.com,https://github.com/username/weather,project4.jpg,false
-Portfolio Website,"Responsive portfolio website with smooth animations, dark mode, and optimized performance","React,Three.js,GSAP,Tailwind",https://portfolio.com,https://github.com/username/portfolio,project5.jpg,false
-Crypto Trading Bot,"Automated cryptocurrency trading bot with machine learning algorithms and risk management systems","Python,TensorFlow,Redis,WebSocket",https://cryptobot.com,https://github.com/username/cryptobot,project6.jpg,false
+SixSense,"AI-powered IPL score predictor using player vs bowler data","Python,Pandas,Streamlit,Machine Learning",,https://github.com/thanushshetty9353/IPL-live-score-detection.git,ipl.jpg,false
+VisionForge,"AI image enhancer and transformer with multiple filters","Python,CV2,NumPy,Streamlit",,https://github.com/thanushshetty9353/image-processing.git,img_process.jpg,false
+EchoMind,"Voice assistant that responds to commands using AI","Python,SpeechRecognition,Pyttsx3,Streamlit",,https://github.com/thanushshetty9353/jarvis_voice_assistent.git,jarvis.jpg,false
+TextTrim,"Summarizes long text into concise summaries using NLP","Python,NLP,Transformers,Streamlit",,https://github.com/thanushshetty9353/textsummerizer.git,text.jpg,false
+iCoder,"Bootstrap-powered web dev blog platform","HTML,CSS,JavaScript,Bootstrap",,https://github.com/thanushshetty9353/iCoder.git,web_dev.png,false
+BuddyBot,"Simple chat assistant with basic conversation flow","Python,NLP,Flask",,https://github.com/thanushshetty9353/BuddyBot.git,logo.png,false

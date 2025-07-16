@@ -1,24 +1,39 @@
 name,category,level,type
-React,technical,95,Frontend
-TypeScript,technical,90,Frontend
-Node.js,technical,90,Backend
-Python,technical,85,Backend
-PostgreSQL,technical,88,Database
-MongoDB,technical,82,Database
-AWS,technical,85,Cloud
-Docker,technical,80,DevOps
-Git,technical,95,Tools
-Figma,technical,88,Design
-Leadership,soft,90,Management
-Communication,soft,95,Interpersonal
-Problem Solving,soft,92,Analytical
-Team Collaboration,soft,88,Interpersonal
-Project Management,soft,85,Management
-Football,sports,80,Team Sport
-Basketball,sports,75,Team Sport
-Swimming,sports,70,Individual Sport
-Running,sports,85,Individual Sport
-English,language,100,Native
-Spanish,language,80,Fluent
-French,language,65,Intermediate
-German,language,45,Basic
+C,technical,0,Programming Language
+Python,technical,0,Programming Language
+Java (Basics),technical,0,Programming Language
+Django,technical,0,Web Framework
+Flask,technical,0,Web Framework
+HTML,technical,0,Web Framework
+CSS,technical,0,Web Framework
+React,technical,0,Frontend Framework
+MySQ,technical,0,Database
+MongoDB,technical,0,Database
+GitHub,technical,0,Version Control
+Figma,technical,0,Design Tool
+Canva,technical,0,Design Tool
+Microsoft Excel,technical,0,Productivity Tool
+Machine Learning,technical,0,AI/ML
+Tableau,technical,0,Data Visualization
+PowerBI,technical,0,Data Visualization
+Communication,soft,100,Interpersonal
+Leadership,soft,100,Management
+Adaptability,soft,100,Personal Growth
+Creativity,soft,100,Innovation
+Team Collaboration,soft,100,Interpersonal
+Time Management,soft,100,Organizational
+Problem Solving,soft,100,Analytical
+Responsibility,soft,100,Work Ethic
+Project Management,soft,100,Management
+Cricket,sports,100,Team Sport
+Volleyball,sports,100,Team Sport
+Watching Movies,sports,100,Recreational
+Exploring New Places,sports,100,Travel & Culture
+Traveling,sports,100,Travel & Culture
+Drawing,sports,100,Creative Hobby
+Designing,sports,100,Creative Hobby
+Exploring New Tools,sports,100,Tech Interest
+English,language,100,Fluent 
+Kannada,language,100,Fluent  
+Tulu,language,100,Native  
+Hindi,language,75,Conversational

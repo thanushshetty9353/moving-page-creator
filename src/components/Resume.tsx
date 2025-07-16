@@ -39,17 +39,6 @@ const Resume = () => {
     loadData();
   }, []);
 
-  const handleDownloadResume = () => {
-    // Create a downloadable resume file
-    const resumeUrl = '/resume.pdf'; // Add your resume PDF to public folder
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'John_Doe_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const getSkillIcon = (category: string) => {
     switch (category) {
       case 'technical': return <Code className="w-5 h-5" />;
@@ -57,16 +46,6 @@ const Resume = () => {
       case 'sports': return <Dumbbell className="w-5 h-5" />;
       case 'language': return <Globe className="w-5 h-5" />;
       default: return <Brain className="w-5 h-5" />;
-    }
-  };
-
-  const getSkillColor = (category: string) => {
-    switch (category) {
-      case 'technical': return 'neon-pink';
-      case 'soft': return 'neon-blue';
-      case 'sports': return 'neon-green';
-      case 'language': return 'neon-purple';
-      default: return 'neon-pink';
     }
   };
 
@@ -102,18 +81,20 @@ const Resume = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive overview of my education, skills, and professional experience
           </p>
-          
-          <Button 
-            onClick={handleDownloadResume}
-            size="lg" 
-            className="bg-neon-gradient-1 hover-neon-pink text-white font-semibold px-8 py-4"
-          >
-            <Download className="mr-3 h-6 w-6" />
-            Download Resume PDF
-          </Button>
+
+          {/* ✅ Clean download using <a download> */}
+          <a href="/resume.pdf" download>
+            <Button 
+              size="lg" 
+              className="bg-neon-gradient-1 hover-neon-pink text-white font-semibold px-8 py-4"
+            >
+              <Download className="mr-3 h-6 w-6" />
+              Download Resume PDF
+            </Button>
+          </a>
         </div>
 
-        {/* Education Section */}
+        {/* Education */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <GraduationCap className="text-transparent bg-neon-gradient-1 bg-clip-text" />
@@ -143,7 +124,7 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Internships Section */}
+        {/* Internships */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <Award className="text-transparent bg-neon-gradient-2 bg-clip-text" />
@@ -176,7 +157,7 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Skills Sections */}
+        {/* Skills */}
         <div className="space-y-12">
           {/* Technical Skills */}
           <div>
@@ -184,24 +165,15 @@ const Resume = () => {
               {getSkillIcon('technical')}
               <span className="text-neon-gradient-1">Technical Skills</span>
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {technicalSkills.map((skill, index) => (
                 <Card 
                   key={skill.name}
-                  className="p-4 glass-card hover-neon-pink border-white/10"
+                  className="glass-card hover-neon-pink border-white/10 flex flex-col items-center justify-center text-center h-28"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-semibold text-white">{skill.name}</span>
-                    <span className="text-pink-400 text-sm">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div 
-                      className="bg-neon-gradient-1 h-2 rounded-full transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                  <p className="text-xs text-gray-400 mt-1">{skill.type}</p>
+                  <span className="font-semibold text-white">{skill.name}</span>
+                  <span className="text-sm text-gray-400 mt-1">{skill.type}</span>
                 </Card>
               ))}
             </div>
