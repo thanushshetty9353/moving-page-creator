@@ -52,7 +52,7 @@ const Projects = () => {
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-bg-dark to-bg-darker relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Floating Blobs */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-neon-gradient-1 rounded-full opacity-10 animate-float blur-xl" />
       <div className="absolute bottom-40 right-20 w-24 h-24 bg-neon-gradient-2 rounded-full opacity-15 animate-float blur-xl" style={{ animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-neon-gradient-3 rounded-full opacity-20 animate-float blur-xl" style={{ animationDelay: '4s' }} />
@@ -116,15 +116,17 @@ const Projects = () => {
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                   <div className="relative group hover-lift">
                     <div className="absolute -inset-4 bg-neon-gradient-1 rounded-2xl opacity-20 group-hover:opacity-40 blur-xl transition-all duration-500" />
-                    <img 
-                      src={`/images/${project.image}`}
-                      alt={project.title}
-                      className="relative w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 border border-white/10"
-                      onError={(e) => {
-                        e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'%3E%3Crect width='500' height='300' fill='%23374151'/%3E%3Ctext x='250' y='150' font-family='Arial' font-size='16' fill='%23fff' text-anchor='middle' dy='0.3em'%3EPROJECT IMAGE%3C/text%3E%3C/svg%3E";
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-neon-gradient-2 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+                    <div className="w-full h-64 bg-[#1e1e2f] rounded-2xl flex items-center justify-center p-6 border border-white/10">
+                      <img
+                        src={`/images/${project.image}`}
+                        alt={project.title}
+                        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'%3E%3Crect width='500' height='300' fill='%23374151'/%3E%3Ctext x='250' y='150' font-family='Arial' font-size='16' fill='%23fff' text-anchor='middle' dy='0.3em'%3EPROJECT IMAGE%3C/text%3E%3C/svg%3E";
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -148,25 +150,16 @@ const Projects = () => {
                 >
                   <div className="absolute -inset-1 bg-neon-gradient-2 rounded-lg opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500" />
                   <div className="relative bg-bg-card rounded-lg">
-                    <div className="relative overflow-hidden">
+                    <div className="w-full h-52 bg-[#1e1e2f] flex items-center justify-center p-4">
                       <img 
                         src={`/images/${project.image}`}
                         alt={project.title}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                         onError={(e) => {
-                          e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23374151'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23fff' text-anchor='middle' dy='0.3em'%3EPROJECT IMAGE%3C/text%3E%3C/svg%3E";
+                          e.currentTarget.src =
+                            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23374151'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23fff' text-anchor='middle' dy='0.3em'%3EPROJECT IMAGE%3C/text%3E%3C/svg%3E";
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/90 to-transparent" />
-                      <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button 
-                          size="sm" 
-                          className="glass-card hover-neon-blue border-white/20 p-2"
-                          onClick={() => window.open(project.github_url, '_blank')}
-                        >
-                          <Github className="h-4 w-4" />
-                        </Button>
-                      </div>
                     </div>
                     <div className="p-6">
                       <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-transparent group-hover:bg-neon-gradient-1 group-hover:bg-clip-text transition-all duration-300">

@@ -3,19 +3,35 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "#", label: "Email" }
+    {
+      icon: Github,
+      href: "https://github.com/thanushshetty9353",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/thanush-shetty-a49801298",
+      label: "LinkedIn",
+    },
+    {
+      icon: Twitter,
+      href: "https://twitter.com/", // Replace with your actual Twitter handle
+      label: "Twitter",
+    },
+    {
+      icon: Mail,
+      href: "mailto:thanushshetty7@gmail.com",
+      label: "Email",
+    },
   ];
 
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -26,18 +42,24 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gradient">Thanush Shetty</h3>
             <p className="text-muted-foreground max-w-sm">
-             AIML Aspirant | Web Developer | Tech Explorer
+              AIML Aspirant | Web Developer | Tech Explorer
             </p>
             <div className="flex space-x-2">
               {socialLinks.map((social) => (
-                <Button
+                <a
                   key={social.label}
-                  size="icon"
-                  variant="ghost"
-                  className="hover-glow rounded-full"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <social.icon className="h-4 w-4" />
-                </Button>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="hover-glow rounded-full"
+                  >
+                    <social.icon className="h-4 w-4" />
+                  </Button>
+                </a>
               ))}
             </div>
           </div>
@@ -48,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
@@ -63,9 +85,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>john.doe@example.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>
+                <a href="mailto:thanushshetty7@gmail.com" className="hover:text-primary">
+                  thanushshetty7@gmail.com
+                </a>
+              </p>
+              <p>+918762722706</p>
+              <p>Mangalore, India 🇮🇳</p>
             </div>
           </div>
         </div>
@@ -73,11 +99,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Thanush Shetty. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm flex items-center">
-            Made with <Heart className="h-4 w-4 mx-1 text-red-400" /> using React & Tailwind CSS
-          </p>
+          
         </div>
       </div>
     </footer>
