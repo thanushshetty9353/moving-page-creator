@@ -1,0 +1,24 @@
+name,category,level,type
+React,technical,95,Frontend
+TypeScript,technical,90,Frontend
+Node.js,technical,90,Backend
+Python,technical,85,Backend
+PostgreSQL,technical,88,Database
+MongoDB,technical,82,Database
+AWS,technical,85,Cloud
+Docker,technical,80,DevOps
+Git,technical,95,Tools
+Figma,technical,88,Design
+Leadership,soft,90,Management
+Communication,soft,95,Interpersonal
+Problem Solving,soft,92,Analytical
+Team Collaboration,soft,88,Interpersonal
+Project Management,soft,85,Management
+Football,sports,80,Team Sport
+Basketball,sports,75,Team Sport
+Swimming,sports,70,Individual Sport
+Running,sports,85,Individual Sport
+English,language,100,Native
+Spanish,language,80,Fluent
+French,language,65,Intermediate
+German,language,45,Basic

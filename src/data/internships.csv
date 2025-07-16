@@ -1,0 +1,4 @@
+company,position,duration,description,technologies
+Google,"Software Engineering Intern","Summer 2019","Worked on Google Search algorithms and performance optimization","Python,Go,TensorFlow,BigQuery"
+Microsoft,"Frontend Developer Intern","Summer 2018","Developed user interfaces for Microsoft Office online applications","React,TypeScript,Azure,C#"
+Startup XYZ,"Full Stack Developer Intern","Fall 2017","Built MVP for a social networking platform from scratch","Node.js,React,MongoDB,Socket.io"
