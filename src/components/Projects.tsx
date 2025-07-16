@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { ExternalLink, Github, ArrowRight, Star, Zap, Eye } from "lucide-react";
+import { Github, ArrowRight, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  loadCSVData, 
-  ProjectData, 
-  getFeaturedProjects, 
-  getTechnologiesArray 
+import {
+  loadCSVData,
+  ProjectData,
+  getTechnologiesArray,
 } from "@/utils/csvParser";
 
 const Projects = () => {
@@ -17,10 +16,12 @@ const Projects = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const projectsData = await loadCSVData<ProjectData>('/src/data/projects.csv');
+        const projectsData = await loadCSVData<ProjectData>(
+          "/src/data/projects.csv"
+        );
         setProjects(projectsData);
       } catch (error) {
-        console.error('Error loading projects data:', error);
+        console.error("Error loading projects data:", error);
       } finally {
         setLoading(false);
       }
@@ -45,16 +46,17 @@ const Projects = () => {
       </section>
     );
   }
-  const featuredProjects = getFeaturedProjects(projects);
-  const otherProjects = projects.filter(project => !project.featured);
+
+  const featuredProjects = projects.slice(0, 4);
+  const otherProjects = projects.slice(4);
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-bg-dark to-bg-darker relative overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Background Effects */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-neon-gradient-1 rounded-full opacity-10 animate-float blur-xl" />
       <div className="absolute bottom-40 right-20 w-24 h-24 bg-neon-gradient-2 rounded-full opacity-15 animate-float blur-xl" style={{ animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-neon-gradient-3 rounded-full opacity-20 animate-float blur-xl" style={{ animationDelay: '4s' }} />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -65,7 +67,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Featured Projects */}
+        {/* 🌟 Featured Projects */}
         <div className="space-y-20 mb-20">
           {featuredProjects.map((project, index) => {
             const technologies = getTechnologiesArray(project.technologies);
@@ -85,7 +87,7 @@ const Projects = () => {
                       {project.description}
                     </p>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {technologies.map((tech, techIndex) => (
                       <Badge 
@@ -98,15 +100,8 @@ const Projects = () => {
                       </Badge>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4">
-                    <Button 
-                      className="bg-neon-gradient-1 hover-neon-pink text-white font-semibold px-6 py-3"
-                      onClick={() => window.open(project.live_url, '_blank')}
-                    >
-                      <Eye className="mr-2 h-5 w-5" />
-                      Live Demo
-                    </Button>
                     <Button 
                       variant="outline" 
                       className="glass-card hover-neon-blue border-white/20 text-white font-semibold px-6 py-3"
@@ -117,7 +112,7 @@ const Projects = () => {
                     </Button>
                   </div>
                 </div>
-                
+
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                   <div className="relative group hover-lift">
                     <div className="absolute -inset-4 bg-neon-gradient-1 rounded-2xl opacity-20 group-hover:opacity-40 blur-xl transition-all duration-500" />
@@ -137,7 +132,7 @@ const Projects = () => {
           })}
         </div>
 
-        {/* Other Projects Grid */}
+        {/* 🧠 Other Notable Projects */}
         <div className="mb-12">
           <h3 className="text-4xl font-bold text-center mb-12">
             <span className="text-neon-gradient-2">Other Notable Projects</span>
@@ -151,9 +146,7 @@ const Projects = () => {
                   className="overflow-hidden glass-card hover-lift group border-white/10 relative"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Animated border glow */}
                   <div className="absolute -inset-1 bg-neon-gradient-2 rounded-lg opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500" />
-                  
                   <div className="relative bg-bg-card rounded-lg">
                     <div className="relative overflow-hidden">
                       <img 
@@ -165,16 +158,7 @@ const Projects = () => {
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/90 to-transparent" />
-                      
-                      {/* Floating action buttons */}
                       <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button 
-                          size="sm" 
-                          className="bg-neon-gradient-1 hover-neon-pink p-2"
-                          onClick={() => window.open(project.live_url, '_blank')}
-                        >
-                          <Eye className="h-4 w-4" />
-                        </Button>
                         <Button 
                           size="sm" 
                           className="glass-card hover-neon-blue border-white/20 p-2"
@@ -184,7 +168,6 @@ const Projects = () => {
                         </Button>
                       </div>
                     </div>
-                    
                     <div className="p-6">
                       <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-transparent group-hover:bg-neon-gradient-1 group-hover:bg-clip-text transition-all duration-300">
                         {project.title}
@@ -192,7 +175,6 @@ const Projects = () => {
                       <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                         {project.description}
                       </p>
-                      
                       <div className="flex flex-wrap gap-1 mb-4">
                         {technologies.slice(0, 3).map((tech, techIndex) => (
                           <Badge 
@@ -210,11 +192,10 @@ const Projects = () => {
                           </Badge>
                         )}
                       </div>
-                      
                       <div className="flex justify-between items-center">
                         <div className="flex gap-2">
                           <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
-                          <span className="text-xs text-gray-400">Live Project</span>
+                          <span className="text-xs text-gray-400">Source Code</span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
                       </div>
@@ -224,15 +205,6 @@ const Projects = () => {
               );
             })}
           </div>
-        </div>
-
-        {/* View All Projects Button */}
-        <div className="text-center">
-          <Button size="lg" className="bg-rainbow-gradient hover:opacity-90 text-white font-semibold px-8 py-4 animate-rainbow">
-            <Star className="mr-2 h-5 w-5" />
-            View All Projects on GitHub
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </div>
     </section>
