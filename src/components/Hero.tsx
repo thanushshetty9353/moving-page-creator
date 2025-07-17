@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="relative group">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden profile-neon">
               <img
-                src="./images/profile.jpg"
+                src="/images/profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
@@ -85,7 +85,7 @@ const Hero = () => {
           </Button>
 
           {/* Download Resume */}
-          <a href="./resume.pdf" download>
+          <a href="/resume.pdf" download>
             <Button
               size="lg"
               variant="outline"
