@@ -353,3 +353,78 @@ All colors MUST be HSL.
     animation: pulseNeon 2s ease-in-out infinite;
   }
 }
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes neonGlow {
+  0% { filter: brightness(1) drop-shadow(0 0 5px currentColor); }
+  100% { filter: brightness(1.2) drop-shadow(0 0 20px currentColor); }
+}
+
+@keyframes slideUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes pulseNeon {
+  0%, 100% { 
+    box-shadow: 0 0 5px hsl(var(--neon-pink) / 0.5); 
+  }
+  50% { 
+    box-shadow: 0 0 20px hsl(var(--neon-pink) / 0.8), 0 0 30px hsl(var(--neon-pink) / 0.6); 
+  }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes borderGlow {
+  0% { 
+    box-shadow: 0 0 5px hsl(var(--neon-pink) / 0.5);
+    border-color: hsl(var(--neon-pink) / 0.5);
+  }
+  100% { 
+    box-shadow: 0 0 20px hsl(var(--neon-pink) / 0.8), 0 0 30px hsl(var(--neon-pink) / 0.6);
+    border-color: hsl(var(--neon-pink));
+  }
+}
+
+@keyframes floatParticles {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(0deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(360deg); }
+}
