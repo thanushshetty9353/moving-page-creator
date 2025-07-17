@@ -4,18 +4,22 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "./", // Important for Vercel/Lovable
+  base: mode === "development" ? "./" : "/moving-page-creator/", // ✅ must match your GitHub repo name
   server: {
-    host: "::",
+    host: "localhost",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
 }));
