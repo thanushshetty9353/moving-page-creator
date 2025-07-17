@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "./", // ✅ Needed for relative paths!
+  base: "./", // Important for Vercel/Lovable
   server: {
     host: "::",
     port: 8080,
