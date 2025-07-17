@@ -1,25 +1,28 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
-  base: mode === "development" ? "./" : "/moving-page-creator/", // ✅ must match your GitHub repo name
-  server: {
-    host: "localhost",
-    port: 8080,
-  },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+// 🛠️ Remove top import of lovable-tagger — use inside config instead!
+
+export default defineConfig(async ({ mode }) => {
+  const plugins = [react()];
+
+  if (mode === "development") {
+    const { componentTagger } = await import("lovable-tagger");
+    plugins.push(componentTagger());
+  }
+
+  return {
+    base: mode === "development" ? "./" : "/moving-page-creator/",
+    server: {
+      host: "::",
+      port: 8080,
     },
-  },
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
-  },
-}));
+    plugins,
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+  };
+});
